@@ -1,3 +1,11 @@
+const burger = document.querySelector('.burger');
+const dropdown = document.querySelector('.dropdown');
+
+burger.addEventListener('click', () => {
+  dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+});
+
+
 const items = document.querySelectorAll('.item');
 let currentPage = null;
 
@@ -27,7 +35,7 @@ items.forEach(item => {
 
             currentPage.style.left = "50%";
             currentPage.style.top = "50%";
-            currentPage.style.width = "80vw";
+            currentPage.style.width = "auto";
             currentPage.style.height = "auto";
             currentPage.style.transform = "translate(-50%, -50%)";
         });
@@ -71,3 +79,4 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
+
